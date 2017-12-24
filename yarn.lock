@@ -65,7 +65,7 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-animate@^1.4.3:
+angular-animate@^1.6.8:
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.8.tgz#f38554c9c68770c9588b39c49920bc24e0d6f98a"
 
@@ -75,7 +75,7 @@ angular-ui-router@^0.2.15:
   dependencies:
     angular "^1.0.8"
 
-angular@^1.0.8, angular@^1.4.3:
+angular@^1.0.8, angular@^1.6.8:
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.8.tgz#5be378a58be91a5489e78b59c4518cd9fd273ffb"
 
@@ -901,7 +901,7 @@ css-list@^0.1.0, css-list@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/css-list/-/css-list-0.1.3.tgz#a7b33b4419f83d412320dde9133a0d1004948d70"
 
-css-loader@^0.15.4:
+css-loader@^0.15.6:
   version "0.15.6"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.15.6.tgz#2287dee284829ebfb81fac0b294da729b3bfa144"
   dependencies:

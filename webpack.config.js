@@ -5,23 +5,21 @@ Does not need gulp in order to do so,
 but we use gulp to orchestrate
  */
 module.exports = {
-    output: {
-      filename: 'bundle.js'
-    },
-  
-    devtool: 'sourcemap',
-  
-    module: {
-      loaders: [
-        { test: /\.html$/, loader: 'raw' },
-        { test: /\.styl$/, loader: 'style!css!stylus' },
-        { test: /\.css/, loader: 'style!css' },
-        { test: /\.js$/, loader: 'babel?stage=1', exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
-      ]
-    },
-  
-    stylus: {
-      use: [require('jeet')(), require('rupture')()]
-    }
-  };
-  
+  output: {
+    filename: 'bundle.js'
+  },
+
+  devtool: 'sourcemap',
+
+  module: {
+    loaders: [
+      { test: /\.html$/, loader: 'raw' },
+      { test: /\.css$/,use: [ 'style-loader', 'css-loader' ]},
+      { test: /\.js$/, loader: 'babel?stage=1', excludes: [/node_modules/] },
+    ]
+  },
+
+  stylus: {
+    use: [require('jeet')(), require('rupture')()]
+  }
+};

@@ -1,7 +1,7 @@
-import _ from 'lodash'
+//import _ from 'lodash'
 
 const showMessage = () => {
-  console.log('hello');  
+  console.log('shello');  
 }
 
 showMessage();
