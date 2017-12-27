@@ -6,7 +6,6 @@ import _ from 'lodash';
 class BlogController {
   constructor(Posts) {
     this.message = 'The latest from the blog';
-  //  this.catpic = catpic;
     
     this.Posts = Posts;
     this.getPosts();
