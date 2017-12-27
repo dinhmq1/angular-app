@@ -30,7 +30,7 @@ export const home = angular.module('home', [])
   });
 })
 .controller('HomeController', function($scope) {
-  $scope.title = 'Welcome to the blog!'
+  $scope.title = 'Welcome to Free Post!'
   $scope.items = _.times(5, i => {
     return `I am item ${i}`;
   });
