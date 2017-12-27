@@ -23,6 +23,7 @@ import {blog} from './components/blog/blog';
 import {common} from './components/common/common';
 import {shared} from './shared/shared';
 import {blogPost} from './components/blogPost/blogPost';
+import {admin} from './components/admin/admin';
 
 
 angular.module('app', [
@@ -37,6 +38,7 @@ angular.module('app', [
   blog.name,
   common.name,
   shared.name,
-  blogPost.name
+  blogPost.name,
+  admin.name
 ])
 .directive('app', appDirective);
