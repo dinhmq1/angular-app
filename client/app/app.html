@@ -1,6 +1,7 @@
-<div id="app">
-    <header>
-      <ul class="nav">
+<div id="app" class="container-fluid">
+  <header class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills float-right">
         <li class="nav-item">
           <span ui-sref="home">
             <a class="nav-link" ui-sref="home">Home</a>
@@ -10,11 +11,20 @@
           <a class="nav-link" ui-sref="blog">Blogs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" ui-sref="admin">Admin</a>
-          </li>
+          <a class="nav-link" ui-sref="admin">Admin</a>
+        </li>
       </ul>
-      <!-- As a link -->
-    </header>
-    <div class="container-fluid" ui-view></div>
-    <footer></footer>
-  </div>
+    </nav>
+    <h3 class="text-muted">Component Based AngularJS App</h3>
+  </header>
+
+  <main role="main">
+    <div ui-view></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Company 2017</p>
+  </footer>
+
+</div>
+<!-- /container -->
