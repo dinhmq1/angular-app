@@ -1,5 +1,5 @@
-// import '../styles/normalize.css';
-// import '../styles/bootstrap.css';
+import '../styles/normalize.css';
+import '../styles/bootstrap.css';
 //import './app.css';
 import './app.styl';
 import {appDirective} from './app.directive';
