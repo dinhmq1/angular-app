@@ -1,10 +1,16 @@
-<div class="container">
-  <div class="blog">
+<div class="blog">
+  <div class="blog-header">
+    <div class="container">
+      <h1 class="blog-title">{{ vm.post.title }}</h1>
+      <p class="lead blog-description">Post #{{ vm.post.id }} by
+        <a> User #{{ vm.post.userId }}</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
     <div class="row">
       <div class="col-sm-8 blog-main">
         <div class="blog-post">
-          <h2 class="blog-post-title">{{ vm.post.title }}</h2>
-          <p class="blog-post-meta">Post :#{{ vm.post.id }} by <a> User :#{{ vm.post.userId }}</a></p>
           <p>{{ vm.post.body }}</p>
         </div>
         <!-- /.blog-post -->
