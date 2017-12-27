@@ -11,7 +11,7 @@ class BlogController {
     
     this.Posts = Posts;
     this.getPosts();
-
+ 
     this.search = '';
   }
 

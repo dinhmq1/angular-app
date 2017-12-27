@@ -1,9 +1,10 @@
 class AdminController {
     constructor(Posts, $state) {
       this.post = {
-        author: 'You',
-        text: '',
-        title: ''
+        userId: 11,
+        body: '',
+        title: '',
+        id: 101
       };
       this.Posts = Posts;
       this.$state = $state;

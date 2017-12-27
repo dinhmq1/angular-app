@@ -42,6 +42,7 @@ const posts = ($http, API, $q) => {
 
   const create = (data) => {
     data.id = data.id || ++id;
+    console.log(data);
     data.createdAt = new Date().toString();
     return $http({
       data,
