@@ -5,9 +5,9 @@ import {homeDirective} from './home.directive';
 // as exporting the var at the end of the file
 // using export {varname}
 export const home = angular.module('home', [])
-.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
-
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+  //$urlRouterProvider.otherwise('/');
+  $locationProvider.hashPrefix('');
   $stateProvider.state('home', {
     url: '/',
     template: '<home></home>'

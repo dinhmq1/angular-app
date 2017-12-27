@@ -1,17 +1,20 @@
 <div id="app">
-  <header>
-    <ul class="nav">
-      <li class="nav-item">
-        <span ui-sref="home">
-          <a class="nav-link" ui-sref="home">Home</a>
-        </span>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ui-sref="blog">Blogs</a>
-      </li>
-    </ul>
-    <!-- As a link -->
-  </header>
-  <div class="container-fluid"  ui-view></div>
-  <footer></footer>
-</div>
+    <header>
+      <nav>
+        <div class="logo">
+          <span ui-sref="home">
+            <a ui-sref="home">ngBlog</a>
+          </span>
+        </div>
+        <div class="links">
+          <a ui-sref="blog">blog</a>
+          <a ui-sref="admin">admin</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div ui-view></div>
+    </main>
+    <footer></footer>
+  </div>
+  

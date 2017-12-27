@@ -1,6 +1,5 @@
 import '../styles/index.styl';
 import {appDirective} from './app.directive';
-
 // we don't need to use a variable
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
@@ -16,13 +15,14 @@ import {appDirective} from './app.directive';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
-//import 'normalize.css'
-//import './app.styl';
 // because we exported a named variable
 // without using default keyword
 // we must import it with the brackets
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
+import {common} from './components/common/common';
+import {shared} from './shared/shared';
+import {blogPost} from './components/blogPost/blogPost';
 
 
 angular.module('app', [
@@ -34,6 +34,9 @@ angular.module('app', [
   // property who's value is the name you set the
   // module to be
   home.name,
-  blog.name
+  blog.name,
+  common.name,
+  shared.name,
+  blogPost.name
 ])
 .directive('app', appDirective);
