@@ -1,7 +1,6 @@
-//import _ from 'lodash'
-
-const showMessage = () => {
-  alert('shello');
+const showMessage = ()=> {
+  alert('it works!!!');
 }
 
 showMessage();
+
