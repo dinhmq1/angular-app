@@ -1,29 +1,36 @@
-<div id="app" class="container-fluid">
-  <header class="header clearfix">
-    <nav>
-      <ul class="nav nav-pills float-right">
-        <li class="nav-item">
-          <span ui-sref="home">
-            <a class="nav-link" ui-sref="home">Home</a>
-          </span>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="blog">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="admin">Admin</a>
-        </li>
-      </ul>
+<div id="app">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" ui-sref="home">Angular 1.6 with ES6</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <span ui-sref="home">
+              <a class="nav-link" ui-sref="home">Home</a>
+            </span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="blog">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="admin">Admin</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <h3 class="text-muted">Component Based AngularJS App</h3>
   </header>
-
   <main role="main">
-    <div ui-view></div>
-  </main>
 
+  <div ui-view></div>
+</main>
   <footer class="footer">
-    <p>&copy; Company 2017</p>
+    <div class="container">
+      <span class="text-muted">Mike Dinh 12/27/17</span>
+    </div>
   </footer>
 
 </div>
