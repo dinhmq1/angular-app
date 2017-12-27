@@ -1,6 +1,6 @@
 class FailureController {
     constructor() {
-      this.greeting = 'FailureController!';
+      this.greeting = "Oops! Something went wrong, you're post failed to submit";
     }
   
   }
