@@ -1,7 +1,7 @@
 class AdminController {
     constructor(Posts, $state) {
       this.post = {
-        userId: Math.floor((Math.random() * 20) + 10),
+        //userId: Math.floor((Math.random() * 20) + 10),
         id: Math.floor((Math.random() * 1500) + 1),
         title: '',        
         body: ''

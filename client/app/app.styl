@@ -1,71 +1,57 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
 }
 
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
+.navbar {
+  margin-bottom: 0;
 }
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
 }
 
-code {
-  font-size: 80%;
+.jumbotron p:last-child {
+  margin-bottom: 0;
 }
 
-header {
-  display: inline-block;
-}
-/* Nav links */
-.nav-link {
-  position: relative;
-  padding: 1rem;
-  font-weight: 500;
-  color: #cdddeb;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #fff;
-  background-color: transparent;
+.jumbotron-heading {
+  font-weight: 300;
 }
 
-/* Active state gets a caret at the bottom */
-.nav-link.active {
-  color: #fff;
+.jumbotron .container {
+  max-width: 40rem;
 }
-.nav-link.active::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -.3rem;
-  vertical-align: middle;
-  content: "";
-  border-right: .3rem solid transparent;
-  border-bottom: .3rem solid;
-  border-left: .3rem solid transparent;
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
 }

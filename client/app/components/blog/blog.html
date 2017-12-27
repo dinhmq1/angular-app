@@ -1,4 +1,27 @@
-<section class="blog">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">{{ vm.message }}</h1>
+          <div class="search">
+            <textbox bind-to="vm.search" label="Start Typing to Search"></textbox>
+          </div>
+        </div>
+
+
+      <div class="album text-muted">
+        <div class="container">
+
+          <div class="row">
+            <div ng-repeat="post in vm.posts | filter:vm.search" class="card slide">
+              <img ng-src="http://placehold.it/150/c558e0"  alt="Card image cap">
+              <p class="card-text"><span>{{ post.title }}</span></p>
+              <a ui-sref="blogPost({title: post.slug})" class="btn btn-primary">details</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </section>
+<!-- <section class="blog">
   <div class="header">
     <h1>{{ vm.message }}</h1>
   </div>
@@ -25,4 +48,4 @@
       <button ui-sref="blogPost({title: post.slug})" class="btn btn-primary">details</button>
     </div>
   </div>
-</section>
+</section> -->
