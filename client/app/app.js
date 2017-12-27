@@ -2,8 +2,6 @@
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
 // <style> tag in the head by default but can be changed
-//import 'normalize.css';
-//import './app.styl';
 // the angular libs are just common js
 // and therefore we can assume they were
 // exported using the default keyword in ES2015
@@ -15,6 +13,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
+//import 'normalize.css'
+//import './app.styl';
 // because we exported a named variable
 // without using default keyword
 // we must import it with the brackets
