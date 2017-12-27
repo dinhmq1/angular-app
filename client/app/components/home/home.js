@@ -1,4 +1,5 @@
-import './home.css';
+
+import './home.styl';
 import angular from 'angular';
 import _ from 'lodash';
 

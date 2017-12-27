@@ -1,5 +1,7 @@
 import '../styles/normalize.css';
-import './app.css';
+import '../styles/bootstrap.css';
+//import './app.css';
+import './app.styl';
 // we don't need to use a variable
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
