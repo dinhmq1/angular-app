@@ -6,7 +6,7 @@ class HomeController {
   // bind to this and not $scope
   // because of controllerAs.
   constructor() {
-    this.title = 'FreePost';
+    this.title = "Petrocloud's Technical Test";
   }
 }
 // could also just export the class up top as well
