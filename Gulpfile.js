@@ -3,6 +3,7 @@ var sync    = require('run-sequence');
 var browser = require('browser-sync');
 var webpack = require('webpack-stream');
 var todo    = require('gulp-todoist');
+var path    = require('path');
 
 /*
 map of paths for using with the tasks below

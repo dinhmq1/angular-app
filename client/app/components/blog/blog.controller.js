@@ -1,7 +1,7 @@
 import _ from 'lodash';
 // importing images using the file loader in webpack
 // catpic will be the path to the emitted photo
-import catpic from '../../../images/cat.jpeg';
+import catpic from '../../../images/cat2.jpeg';
 
 class BlogController {
   constructor(Posts) {
