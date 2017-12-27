@@ -1,11 +1,20 @@
-<section class="blog-post">
-        <div class="blog-post-card">
-          <div class="blog-post-title">
-            <h2>{{ vm.post.title }}</h2>
-          </div>
-          <div class="blog-post-content">
-            <p>{{ vm.post.body }}</p>
-          </div>
+<div class="blog">
+  <div class="blog-header">
+    <div class="container">
+      <h1 class="blog-title">{{ vm.post.title }}</h1>
+      <p class="lead blog-description">Post #{{ vm.post.id }} by
+        <a> User #{{ vm.post.userId }}</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        <div class="blog-post">
+          <p>{{ vm.post.body }}</p>
         </div>
-      </section>
-      
+        <!-- /.blog-post -->
+      </div>
+    </div>
+  </div>
+</div>

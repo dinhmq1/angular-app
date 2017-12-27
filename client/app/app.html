@@ -1,20 +1,37 @@
 <div id="app">
-    <header>
-      <ul class="nav">
-        <li class="nav-item">
-          <span ui-sref="home">
-            <a class="nav-link" ui-sref="home">Home</a>
-          </span>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="blog">Blogs</a>
-        </li>
-        <li class="nav-item">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" ui-sref="home">Angular 1.6 with ES6</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <span ui-sref="home">
+              <a class="nav-link" ui-sref="home">Home</a>
+            </span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="blog">Blogs</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" ui-sref="admin">Admin</a>
           </li>
-      </ul>
-      <!-- As a link -->
-    </header>
-    <div class="container-fluid" ui-view></div>
-    <footer></footer>
-  </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main role="main">
+
+  <div ui-view></div>
+</main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Developer: Mike Dinh 12/27/17</span>
+    </div>
+  </footer>
+
+</div>
+<!-- /container -->
