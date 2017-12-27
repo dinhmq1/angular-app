@@ -1,7 +1,9 @@
-import '../styles/normalize.css';
-import '../styles/bootstrap.css';
+// import '../styles/normalize.css';
+// import '../styles/bootstrap.css';
 //import './app.css';
 import './app.styl';
+import {appDirective} from './app.directive';
+
 // we don't need to use a variable
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
@@ -23,6 +25,8 @@ import ngAnimate from 'angular-animate';
 // without using default keyword
 // we must import it with the brackets
 import {home} from './components/home/home';
+import {blog} from './components/blog/blog';
+
 
 angular.module('app', [
   uiRouter,
@@ -32,5 +36,7 @@ angular.module('app', [
   // all angular modules have a name
   // property who's value is the name you set the
   // module to be
-  home.name
-]);
+  home.name,
+  blog.name
+])
+.directive('app', appDirective);
