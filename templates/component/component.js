@@ -1,4 +1,4 @@
-import {<%= name %> Directive} from './<%= name %>.directive';
+import {<%= name %>Directive} from './<%= name %>.directive';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
@@ -10,4 +10,4 @@ export const <%= name %> = angular.module('<%= name %>', [uiRouter])
             template: '<<%- name %>></<%- name %>>'
         })
     })
-    .directive('<%= name %>', <%= name %> Directive);
+    .directive('<%= name %>', <%= name %>Directive);
