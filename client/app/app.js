@@ -24,6 +24,8 @@ import {common} from './components/common/common';
 import {shared} from './shared/shared';
 import {blogPost} from './components/blogPost/blogPost';
 import {admin} from './components/admin/admin';
+import {success} from './components/success/success';
+import {failure} from './components/failure/failure';
 
 
 angular.module('app', [
@@ -39,7 +41,9 @@ angular.module('app', [
   common.name,
   shared.name,
   blogPost.name,
-  admin.name
+  admin.name,
+  success.name,
+  failure.name
 ])
 // come back later and fix the right way
 // http://www.codelord.net/2017/08/20/angular-1-dot-6-s-possibly-unhandled-rejection-errors/
