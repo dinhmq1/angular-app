@@ -6,7 +6,7 @@ class HomeController {
   // bind to this and not $scope
   // because of controllerAs.
   constructor() {
-    this.title = 'Welcome to the blog!';
+    this.title = 'Welcome to the Free Post Blog!';
     this.items = _.times(5, i => {
       return `I am item ${i}`;
     });

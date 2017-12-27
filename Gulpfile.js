@@ -12,7 +12,6 @@ var paths = {
   app: ['client/app/**/*.{js,styl,html}'],
   js: 'client/app/**/*!(.spec.js).js',
   styl: ['client/app/**/*.styl', 'client/style/**/*.styl'],
-  css: ['client/app/**/*.css', 'client/style/**/*.css', 'client/app/*.css', 'client/app/components/home/*.css'],
   toCopy: ['client/index.html'],
   html: ['client/index.html', 'client/app/**/*.html'],
   dest: 'dist'

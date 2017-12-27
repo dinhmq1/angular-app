@@ -1,7 +1,4 @@
-import '../styles/normalize.css';
-import '../styles/bootstrap.css';
-//import './app.css';
-import './app.styl';
+import '../styles/index.styl';
 import {appDirective} from './app.directive';
 
 // we don't need to use a variable
