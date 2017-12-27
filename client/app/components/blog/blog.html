@@ -1,20 +1,13 @@
-<section class="blog">
-  <div class="header">
-    <h1>{{ vm.message }}</h1>
-  </div>
-
-  <div class="posts">
-    <div ng-repeat="post in vm.posts" class="post">
-      <div class="post-img">
-        <img src="//placekitten.com/g/200/300" alt="kitten">
+<div class="row">
+    <div class="col-sm-6" ng-repeat="post in vm.posts">
+      <img class="card-img-top" src="https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781">
+      <div class="card">
+        <div class="card-block">
+          <h3 class="card-title">{{ post.title }}</h3>
+          <p class="card-text">{{ vm.message }}</p>
+          <a href="#" class="btn btn-primary">{{ post.author }}</a>
+        </div>
       </div>
-      <div class="post-title">
-        <span>{{ post.title }}</span>
-      </div>
-      <div class="post-author">
-        <span>{{ post.author }}</span>
-      </div>
-      <button class="button fab action">></button>
     </div>
   </div>
-</section>
+  
