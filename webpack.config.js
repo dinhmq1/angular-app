@@ -1,3 +1,9 @@
+/*
+config for webpack. Will be used in
+the Gulpfile for building our app.
+Does not need gulp in order to do so,
+but we use gulp to orchestrate
+ */
 module.exports = {
   output: {
     filename: 'bundle.js'
@@ -8,13 +14,9 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.html$/, loader: 'raw' },
-      { test: /\.styl$/, loader: 'css!style!stylus' },
-      // stage=1 is a query string to pass in loader options
-      // in this case, 'stage' allows us to turn features on and off
-      // https://babeljs.io/docs/plugins/preset-stage-1/
-      // regex exclude node_modules so we don't convert everything in
-      // there from es6 to es5.
-      { test: /\.js$/, loader: 'babel?stage=1', excludes: [/node_modules/] }
+      { test: /\.styl$/, loader: 'style!css!stylus' },
+      { test: /\.css/, loader: 'style!css' },
+      { test: /\.js$/, loader: 'babel?stage=1', exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
     ]
   },
 

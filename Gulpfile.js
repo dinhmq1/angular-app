@@ -11,7 +11,8 @@ var paths = {
   entry: 'client/app/app.js',
   app: ['client/app/**/*.{js,styl,html}'],
   js: 'client/app/**/*!(.spec.js).js',
-  styl: 'client/app/**/*.styl',
+  styl: ['client/app/**/*.styl', 'client/style/**/*.styl'],
+  css: ['client/app/**/*.css', 'client/style/**/*.css', 'client/app/*.css', 'client/app/components/home/*.css'],
   toCopy: ['client/index.html'],
   html: ['client/index.html', 'client/app/**/*.html'],
   dest: 'dist'
@@ -52,7 +53,7 @@ task to watch files for changes and call build and copy tasks
  */
 gulp.task('watch', function() {
   gulp.watch(paths.app, ['build', browser.reload]);
-  gulp.watch(paths.toCopy, ['copy']);
+  gulp.watch(paths.toCopy, ['copy', browser.reload]);
 });
 
 gulp.task('default', function(done) {
