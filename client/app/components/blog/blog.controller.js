@@ -5,7 +5,9 @@ import _ from 'lodash';
 
 class BlogController {
   constructor(Posts) {
+    //constcatpic = 'http://placehold.it/150/92c952';
     this.message = 'The latest from the blog';
+    // this.catpic = catpic;
     
     this.Posts = Posts;
     this.getPosts();
