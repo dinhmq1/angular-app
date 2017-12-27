@@ -1,37 +1,41 @@
 <div id="app">
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" ui-sref="home">Angular 1.6 with ES6</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <span ui-sref="home">
-              <a class="nav-link" ui-sref="home">Home</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" ui-sref="blog">Blogs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" ui-sref="admin">Admin</a>
-          </li>
-        </ul>
+    <div class="overlay" ui-view></div>
+    <div class="masthead">
+      <div class="masthead-bg"></div>
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-12 my-auto">
+            <div class="masthead-content text-white py-5 py-md-0">
+              <h1 class="mb-3">Coming Soon!</h1>
+              <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is <strong>August 2018</strong>! Sign up for updates using the form below!</p>
+              <div class="input-group input-group-newsletter">
+                <input type="email" class="form-control" placeholder="Enter email..." aria-label="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Notify Me!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
-  <main role="main">
-
-  <div ui-view></div>
-</main>
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">Mike Dinh 12/27/17</span>
     </div>
-  </footer>
+
+    <div class="social-icons">
+      <ul class="list-unstyled text-center mb-0">
+          <li class="list-unstyled-item">
+              <span ui-sref="home">
+                <a class="nav-link" ui-sref="home">Home</a>
+              </span>
+            </li>
+            <li class="list-unstyled-item">
+              <a class="nav-link" ui-sref="blog">Blogs</a>
+            </li>
+            <li class="list-unstyled-item">
+              <a class="nav-link" ui-sref="admin">Admin</a>
+            </li>
+      </ul>
+    </div>
+
 
 </div>
 <!-- /container -->
