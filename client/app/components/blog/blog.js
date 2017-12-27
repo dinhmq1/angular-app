@@ -6,7 +6,7 @@ import ngAnimate from 'angular-animate';
 export const blog = angular.module('blog', [uiRouter, ngAnimate])
   .config(function($stateProvider) {
     $stateProvider.state('blog', {
-      url: '/blog',
+      url: '/posts',
       template: '<blog></blog>'
     });
   })

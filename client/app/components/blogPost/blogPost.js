@@ -5,7 +5,7 @@ import uiRouter from 'angular-ui-router';
 export const blogPost = angular.module('blogPost', [uiRouter])
   .config(function($stateProvider) {
     $stateProvider.state('blogPost', {
-      url: '/blog/:title',
+      url: '/posts/:title',
       // setup attr to accept post from controller
       template: '<blog-post post="post"></blog-post>',
       // one off controller for resolving
