@@ -41,4 +41,9 @@ angular.module('app', [
   blogPost.name,
   admin.name
 ])
+// come back later and fix the right way
+// http://www.codelord.net/2017/08/20/angular-1-dot-6-s-possibly-unhandled-rejection-errors/
+.config(function ($qProvider) {
+  $qProvider.errorOnUnhandledRejections(false);
+})
 .directive('app', appDirective);

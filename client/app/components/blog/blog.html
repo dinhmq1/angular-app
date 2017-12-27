@@ -8,8 +8,11 @@
     <div class="posts">
       <div ng-repeat="post in vm.posts | filter:vm.search" class="post slide">
         <div class="post-img">
-          <img ng-src="{{ ::vm.catpic }}" alt="kitten">
+          <img ng-src="https://pbs.twimg.com/profile_images/737359467742912512/t_pzvyZZ.jpg" alt="kitten">
         </div>
+        <div class="post-title">
+            <span>{{ post.id }}</span>
+          </div>
         <div class="post-title">
           <span>{{ post.title }}</span>
         </div>
