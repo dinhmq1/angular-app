@@ -1,9 +1,9 @@
 # angular-app
 
-# first git clone the repo https://github.com/dinhmq1/angular-app.git
+ first git clone the repo https://github.com/dinhmq1/angular-app.git
 
-# git checkout out develop branch
+ git checkout out develop branch
 
-# npm i
+ npm i
 
-# npm start
+ npm start
