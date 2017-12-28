@@ -15,10 +15,10 @@
                   Article: #{{ post.id }}
                 </h4>
                 <p class="card-text">
-                  <a class="btn btn-primary" ui-sref="blogPost({title: post.slug})">details</a>
-                </p>
+                    {{ post.title }}
+                  </p>
                 <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                  <a class="btn btn-primary" ui-sref="blogPost({title: post.slug})">details</a>
                 </p>
               </div>
               <div class="card-footer">
