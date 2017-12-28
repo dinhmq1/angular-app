@@ -1,4 +1,4 @@
-import {successDirective} from './success.directive';
+import { successDirective } from './success.directive';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 

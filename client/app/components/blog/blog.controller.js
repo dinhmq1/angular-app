@@ -1,17 +1,13 @@
 import _ from 'lodash';
-// importing images using the file loader in webpack
-// catpic will be the path to the emitted photo
-//import catpic from '../../../images/cats.jpg';
 
 class BlogController {
   constructor(Posts) {
-    //constcatpic = 'http://placehold.it/150/92c952';
     this.message = 'Just start typing to search for posts!';
-    // this.catpic = catpic;
     
     this.Posts = Posts;
     this.getPosts();
- 
+    // initiate search property because 
+    // we're using controllerAs
     this.search = '';
   }
 

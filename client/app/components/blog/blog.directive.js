@@ -6,8 +6,8 @@ export const blogDirective = () => {
   return {
     template,
     controller,
-    controllerAs: 'vm',
-    scope: {},
+    controllerAs: 'vm', // vm means view-model
+    scope: {}, // isolated scope
     restrict: 'E',
     replace: true
   };

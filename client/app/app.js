@@ -1,9 +1,9 @@
-import '../styles/index.styl';
-import {appDirective} from './app.directive';
 // we don't need to use a variable
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
 // <style> tag in the head by default but can be changed
+import '../styles/index.styl';
+import {appDirective} from './app.directive';
 // the angular libs are just common js
 // and therefore we can assume they were
 // exported using the default keyword in ES2015

@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 class AdminController {
     constructor(Posts, $state) {
       this.post = {
@@ -25,7 +27,6 @@ class AdminController {
         });
     }
   }
-  
   
   AdminController.$inject = ['Posts', '$state'];
   

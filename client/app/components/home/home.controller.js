@@ -1,5 +1,6 @@
 // create our controller using the
-// highly controversial class
+// ES2015 classes. These classes are primiarily syntabtical
+// sugar over JavaScript's exisiting prototyp-based inheritance.
 import _ from 'lodash';
 
 class HomeController {
