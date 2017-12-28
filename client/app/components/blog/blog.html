@@ -1,25 +1,28 @@
 <div class="container">
-  <div class="jumbotron text-center">
+  <div class="jumbotron">
     <h1 class="jumbotron-heading">{{ vm.message }}</h1>
     <div class="search">
       <textbox bind-to="vm.search" label="Start Typing to Search"></textbox>
     </div>
-    <div>
-      <div class="container-fluid">
-        <div class="album text-muted">
-          <div class="row">
-            <div class="card-deck" ng-repeat="post in vm.posts | filter:vm.search">
-              <div class="card">
-                <img class="card-img-top" ng-src="http://placehold.it/150/c558e0" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    Article: #{{ post.id }}
-                  </h4>
-                  <a ui-sref="blogPost({title: post.slug})" class="btn btn-primary">details</a>
-                </div>
-                <div class="card-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-md-4" ng-repeat="post in vm.posts | filter:vm.search">
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" ng-src="http://placehold.it/150/c558e0" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">
+                  Article: #{{ post.id }}
+                </h4>
+                <p class="card-text">
+                  <a class="btn btn-primary" ui-sref="blogPost({title: post.slug})">details</a>
+                </p>
+                <p class="card-text">
                   <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">By user: {{post.userId}}</small>
               </div>
             </div>
           </div>
