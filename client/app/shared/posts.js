@@ -4,17 +4,13 @@ const posts = ($http, API, $q) => {
   let allPosts = [];
   let id = [];
 
-  const get = () => {
-    return $http.get(`${API.url}/posts?_sort=views&_order=asc`)
-      .then(({ data }) => {
-        allPosts = data.map(post => {
-          // regex: replace each space character with a '-'
-          // g flag replace all occurances
-          post = post.id;
-          return post;
-        });
-      });
-  };
+  const get = (data) => {
+    return $http.get(`${API.url}/posts`)
+      .then(({data}) => {
+        console.log(data);
+      })
+  }
+
 
   const getOne = (query) => {
 
