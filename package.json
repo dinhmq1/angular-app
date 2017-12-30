@@ -49,6 +49,5 @@
     "webpack": "^1.10.1",
     "webpack-stream": "^2.0.0",
     "yargs": "^3.15.0"
-  },
-  "private": true
+  }
 }
