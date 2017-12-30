@@ -4,7 +4,7 @@ class AdminController {
     constructor(Posts, $state) {
       this.post = {
         //userId: Math.floor((Math.random() * 20) + 10),
-        id: Math.floor((Math.random() * 1500) + 1),
+        id: Math.floor((Math.random() * 1500) + 101),
         title: '',        
         body: ''
       };
@@ -17,7 +17,7 @@ class AdminController {
       this.Posts.create(post)
         .then(() => {
           this.post = {};
-          //console.log(this.post);
+          //console.log(post.id);
           this.$state.go('success');
         })
         .catch(() => {

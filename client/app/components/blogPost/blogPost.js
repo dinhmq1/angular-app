@@ -5,7 +5,7 @@ import uiRouter from 'angular-ui-router';
 export const blogPost = angular.module('blogPost', [uiRouter])
   .config(function($stateProvider) {
     $stateProvider.state('blogPost', {
-      url: '/posts/:title',
+      url: '/posts/:id',
       // setup attr to accept post from controller
       template: '<blog-post post="post"></blog-post>',
       // one off controller for resolving
@@ -19,11 +19,13 @@ export const blogPost = angular.module('blogPost', [uiRouter])
 
       resolve: {
         post: function(Posts, $stateParams) {
+          let {id} = $stateParams;
+          return Posts.getOne({id});
           // get the cpost based on title
           // in url
-          let {title} = $stateParams;
-          title = title.replace(/\-+/g, ' ');
-          return Posts.getOne({title});
+          // let {id} = $stateParams;
+          // id = id.replace(/\-+/g, ' ');
+          // return Posts.getOne({id});
         }
       }
     });

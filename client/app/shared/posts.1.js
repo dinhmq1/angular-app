@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const posts = ($http, API, $q) => {
   let allPosts = [];
-  let id = [];
+  let id = 0;
 
   const get = () => {
     return $http.get(`${API.url}/posts?_sort=views&_order=asc`)
@@ -28,7 +28,7 @@ const posts = ($http, API, $q) => {
       // promise comes from a source that can't be trusted.
       return $q.when(post); 
     } else {
-      let url = `${API.url}/posts/${id}`;
+      let url = `${API.url}/posts`;
 
       if (query.id) {
         
@@ -39,8 +39,7 @@ const posts = ($http, API, $q) => {
 
       return $http.get(url)
         .then(({data}) => {
-          console.log(data);
-          return data;
+          return data[0];
         });
     }
   };
@@ -48,10 +47,11 @@ const posts = ($http, API, $q) => {
   const create = (data) => {
     data.id = data.id || ++id;
     data.createdAt = new Date().toString();
+    console.log(data);
     return $http({
       data,
       url: `${API.url}/posts`,
-      method: 'GET'
+      method: 'POST'
     });
   };
 
