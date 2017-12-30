@@ -6,11 +6,11 @@ const posts = ($http, API, $q) => {
 
   const get = () => {
     return $http.get(`${API.url}/posts?_sort=views&_order=asc`)
-      .then(({data}) => {
+      .then(({ data }) => {
         allPosts = data.map(post => {
-        // regex: replace each space character with a '-'
-        // g flag replace all occurances
-        //post.slug = post.title.replace(/\s+/g, '-');
+          // regex: replace each space character with a '-'
+          // g flag replace all occurances
+          post = post.id;
           return post;
         });
       });
@@ -26,20 +26,12 @@ const posts = ($http, API, $q) => {
       // This is useful when you are dealing with an object 
       // that might or might not be a promise, or if the 
       // promise comes from a source that can't be trusted.
-      return $q.when(post); 
+      return $q.when(post);
     } else {
       let url = `${API.url}/posts/${id}`;
-
-      if (query.id) {
-        
-        url += `${query.id}`
-      } else if (query.title) {
-        url += `?title=${query.title}`
-      }
-
+      url += query.id
       return $http.get(url)
-        .then(({data}) => {
-          console.log(data);
+        .then(({ data }) => {
           return data;
         });
     }
@@ -51,18 +43,18 @@ const posts = ($http, API, $q) => {
     return $http({
       data,
       url: `${API.url}/posts`,
-      method: 'GET'
+      method: 'POST'
     });
   };
 
-  return {get, getOne, getState, create};
+  return { get, getOne, getState, create };
 };
 
-  // get post from factory to controller
-  const getState = () => {
-    return allPosts;
-  };
+// get post from factory to controller
+const getState = () => {
+  return allPosts;
+};
 
 posts.$inject = ['$http', 'API', '$q'];
 
-export {posts};
+export { posts };
