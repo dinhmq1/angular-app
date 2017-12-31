@@ -6,7 +6,7 @@ const posts = ($http, API, $q) => {
 
   const get = () => {
     return $http.get(`${API.url}/posts`)
-      .then(({data}) => {
+      .then(({ data }) => {
         allPosts = data.map(post => {
           //console.log(post);
           return post;
@@ -36,10 +36,10 @@ const posts = ($http, API, $q) => {
     }
   };
 
-// get post from factory to controller
-const getState = () => {
-  return allPosts;
-};
+  // get post from factory to controller
+  const getState = () => {
+    return allPosts;
+  };
 
   const create = (data) => {
     data.id = data.id || ++id;

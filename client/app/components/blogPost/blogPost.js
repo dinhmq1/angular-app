@@ -20,6 +20,7 @@ export const blogPost = angular.module('blogPost', [uiRouter])
       resolve: {
         post: function(Posts, $stateParams) {
           let {id} = $stateParams;
+          //id = this.id;
           return Posts.getOne({id});
           // get the cpost based on title
           // in url
