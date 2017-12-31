@@ -4,12 +4,15 @@ const posts = ($http, API, $q) => {
   let allPosts = [];
   let id = [];
 
-  const get = (data) => {
+  const get = () => {
     return $http.get(`${API.url}/posts`)
       .then(({data}) => {
-        console.log(data);
-      })
-  }
+        allPosts = data.map(post => {
+          //console.log(post);
+          return post;
+        });
+      });
+  };
 
 
   const getOne = (query) => {
@@ -33,6 +36,11 @@ const posts = ($http, API, $q) => {
     }
   };
 
+// get post from factory to controller
+const getState = () => {
+  return allPosts;
+};
+
   const create = (data) => {
     data.id = data.id || ++id;
     data.createdAt = new Date().toString();
@@ -42,13 +50,7 @@ const posts = ($http, API, $q) => {
       method: 'POST'
     });
   };
-
   return { get, getOne, getState, create };
-};
-
-// get post from factory to controller
-const getState = () => {
-  return allPosts;
 };
 
 posts.$inject = ['$http', 'API', '$q'];

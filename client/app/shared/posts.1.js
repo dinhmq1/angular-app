@@ -10,7 +10,7 @@ const posts = ($http, API, $q) => {
         allPosts = data.map(post => {
         // regex: replace each space character with a '-'
         // g flag replace all occurances
-        //post.slug = post.title.replace(/\s+/g, '-');
+        post.slug = post.title.replace(/\s+/g, '-');
           return post;
         });
       });
