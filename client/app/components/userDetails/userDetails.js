@@ -7,14 +7,19 @@ export const userDetails = angular.module('userDetails', [uiRouter])
     $stateProvider.state('userDetails', {
       url: '/userDetails/:id',
       template: '<user-details user="user"></user-details>',
-      controller: function($scope, user) {
+      controller: function($scope, user, userPost) {
         $scope.user = user;
+        $scope.userPost = userPost;
       },
       resolve: {
         user: function(Users, $stateParams) {
           let {id} = $stateParams;
           return Users.getOne({id});
-        }
+        },
+        userPost: function(Users, $stateParams) {
+          let {id} = $stateParams;
+          return Users.getUserPosts({id});
+        },
       }
     });
   })

@@ -16,14 +16,12 @@ class AdminController {
     createPost(post = this.post) {
       this.Posts.create(post)
         .then(() => {
-          this.post = {};
-          //console.log(post.id);
-          this.$state.go('success');
+          //this.post = {};
+          console.log(post);
+          //this.$state.go('success');
         })
-        .catch(() => {
-          this.post = {};
-          //console.log('Failed to post blog!');
-          this.$state.go('failure');
+        .catch(function(error) {
+          console.log('Fetch Error :-S', error);
         });
     }
   }

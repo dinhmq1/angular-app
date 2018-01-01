@@ -48,7 +48,10 @@ const posts = ($http, API, $q) => {
     return $http({
       data,
       url: `${API.url}/posts`,
-      method: 'POST'
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
     });
   };
   return { get, getOne, getState, create };
