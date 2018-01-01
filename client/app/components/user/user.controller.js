@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 class UserController {
   constructor(Users) {
-    this.greeting = 'All Users';
+    this.msg = 'All Users';
     this.Users = Users;
     this.getUsers();
     this.search = '';
