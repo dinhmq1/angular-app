@@ -7,3 +7,5 @@
  npm i
 
  npm start
+
+ gulp component --name [someName]
