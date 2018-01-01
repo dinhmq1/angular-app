@@ -6,7 +6,7 @@ import uiRouter from 'angular-ui-router';
 export const user = angular.module('user', [uiRouter])
     .config(($stateProvider) => {
         $stateProvider.state('user', {
-            url: '/users',
+            url: '/user',
             template: '<user></user>'
         })
     })
