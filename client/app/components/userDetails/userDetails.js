@@ -10,7 +10,6 @@ export const userDetails = angular.module('userDetails', [uiRouter])
       controller: function($scope, user) {
         $scope.user = user;
       },
-
       resolve: {
         user: function(Users, $stateParams) {
           let {id} = $stateParams;

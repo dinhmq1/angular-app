@@ -8,8 +8,17 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 blog-main">
-          <div class="blog-post">
-          </div>
+          <!-- <h1>{{vm.user}}</h1> -->
+          <form name="editForm" novalidate ng-submit="vm.editUserDetails(vm.user)">
+            <textbox label="Post title" bind-to="vm.user.id" required name="title">
+            </textbox>
+            <textarea class="form-control" name="post" ng-model="vm.user.name" required placeholder="...write something"></textarea>
+            <div class="form-buttons">
+              <button class="btn btn-primary" ng-disabled="editForm.$invalid">
+                done
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
