@@ -1,17 +1,42 @@
 <div class="userDetails">
-    <div class="blog-masthead">
-      <div class="container">
-        <h1 class="blog-id"><span>{{ user.id }}</span></h1>
-        <p class="lead blog-description">By<a> user number: {{ user.name }}</a></p>
-      </div>
-    </div>
+  <div class="blog-masthead">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-          <div class="blog-post">
-          </div>
+      <p class="lead blog-description">By
+        <a> user number: {{ user.name }}</a>
+      </p>
+    </div>
+  </div>
+  <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.search">
+      <div class="card-deck">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">
+                  {{ userPost.id }}
+                </h4>
+                <p class="card-text">
+                  {{ post.title }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">By user: {{user.name}}</small>
+              </div>
         </div>
+      </div>
+    </div>  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        <h1 ng-click="vm.toggle()">Click Me</h1>
+        <form name="editForm" novalidate ng-submit="vm.editUserDetails(vm.user)">
+          <!-- <textbox label="Post title" bind-to="vm.user.id" required name="title">
+          </textbox> -->
+          <textarea class="form-control" name="post" ng-model="vm.user.name" required placeholder="...write something"></textarea>
+          <div class="form-buttons">
+            <button class="btn btn-primary">
+              done
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  
+</div>
