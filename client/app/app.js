@@ -27,6 +27,8 @@ import {admin} from './components/admin/admin';
 import {success} from './components/success/success';
 import {failure} from './components/failure/failure';
 import {user} from './components/user/user';
+import {test} from './components/test/test';
+import {userDetails} from './components/userDetails/userDetails';
 
 
 angular.module('app', [
@@ -45,7 +47,9 @@ angular.module('app', [
   admin.name,
   success.name,
   failure.name,
-  user.name
+  user.name,
+  test.name,
+  userDetails.name
 ])
 // come back later and fix the right way
 .config(function ($qProvider) {
