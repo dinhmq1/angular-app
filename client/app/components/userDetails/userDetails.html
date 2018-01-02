@@ -6,7 +6,7 @@
       </p>
     </div>
   </div>
-  <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.userId">
+  <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:{'userId': user.id}">
       <div class="card-deck">
         <div class="card">
             <div class="card-block">
