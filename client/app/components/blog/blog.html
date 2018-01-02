@@ -9,21 +9,18 @@
         <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.search">
           <div class="card-deck">
             <div class="card">
-              <img class="card-img-top" ng-src="https://placeimg.com/640/480/animals" alt="Card image cap">
+              <img class="card-img-top" ng-src="https://placeimg.com/640/480/arch" alt="Card image cap">
               <!-- <img class="card-img-top" ng-src="{{ ::vm.painting }}" alt="Card image cap"> -->
               <div class="card-block">
                 <h4 class="card-title">
-                  Article: #{{ post.id }}
+                  <em>{{ post.title }}</em>
                 </h4>
                 <p class="card-text">
-                  {{ post.title }}
-                </p>
-                <p class="card-text">
-                  <a class="btn btn-primary" ui-sref="blogPost({id: post.id})">details</a>
+                  {{ post.body }}&#46;&#46;&#46;
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">By user: {{post.userId}}</small>
+              <div class="card-footer" ng-repeat="user in vm.users | filter:{'id': post.userId} | limitTo: post.userId">
+                  <a ui-sref="blogPost({id: post.id})">{{ user.username }}</a>
               </div>
             </div>
           </div>

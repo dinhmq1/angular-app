@@ -9,7 +9,15 @@ export const blog = angular.module('blog', [uiRouter, ngAnimate])
     $locationProvider.hashPrefix('');
     $stateProvider.state('blog', {
       url: '/',
-      template: '<blog></blog>'
+      template: '<blog user="user"></blog>',
+      controller: function($scope, user) {
+        $scope.user = user;
+      },
+      resolve: {
+        user: function(Users) {
+          return Users.get();
+        }
+      }
     });
   })
   .directive('blog', blogDirective)

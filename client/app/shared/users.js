@@ -10,7 +10,7 @@ const users = ($http, API, $q) => {
     return $http.get(`${API.url}/users`)
       .then(({ data }) => {
         allUsers = data.map(user => {
-          //console.log(data);
+          //console.log(user);
           return user;
         });
       });
