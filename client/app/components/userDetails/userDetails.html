@@ -1,7 +1,6 @@
-<div class="container">
   <div class="jumbotron">
-    <h1 class="jumbotron-heading">{{ user.name }}'s Posts</h1>
     <div class="container-fluid">
+      <h1 class="jumbotron-heading col-6 col-md-4">{{ user.name }}'s Posts</h1>
       <div class="row">
         <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:{'userId': user.id}">
           <div class="card-deck">
@@ -10,10 +9,10 @@
               <!-- <img class="card-img-top" ng-src="{{ ::vm.painting }}" alt="Card image cap"> -->
               <div class="card-block">
                 <h4 class="card-title">
-                  {{ post.userId }}
+                 <a ui-sref="blogPost({id: post.id})">{{ post.title }}</a>
                 </h4>
                 <p class="card-text">
-                  {{ post.title }}
+                  {{ post.body }}&#46;&#46;&#46;
                 </p>
             </div>
           </div>
@@ -21,4 +20,3 @@
       </div>
     </div>
   </div>
-</div>

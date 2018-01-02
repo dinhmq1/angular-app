@@ -8,7 +8,7 @@
             <img class="card-img-top" ng-src="https://placeimg.com/640/480/any" alt="Card image cap">
             <!-- <img class="card-img-top" ng-src="{{ ::vm.painting }}" alt="Card image cap"> -->
             <div class="card-block">
-              <h4 class="card-title" contentEditable="true">
+              <h4 class="card-title" contentEditable="true" ng-model="vm.user.name">
                 {{ user.name }}
               </h4>
               <p class="card-text">
