@@ -2,16 +2,16 @@
   <div class="blog-masthead">
     <div class="container">
       <p class="lead blog-description">By
-        <a> user number: {{ user.name }}</a>
+        <a> user number: {{ user.id }}</a>
       </p>
     </div>
   </div>
-  <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.search">
+  <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.userId">
       <div class="card-deck">
         <div class="card">
             <div class="card-block">
                 <h4 class="card-title">
-                  {{ userPost.id }}
+                  {{ post.userId }}
                 </h4>
                 <p class="card-text">
                   {{ post.title }}

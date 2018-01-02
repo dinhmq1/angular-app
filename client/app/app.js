@@ -18,7 +18,7 @@ import ngAnimate from 'angular-animate';
 // because we exported a named variable
 // without using default keyword
 // we must import it with the brackets
-import {home} from './components/home/home';
+//import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 import {common} from './components/common/common';
 import {shared} from './shared/shared';
@@ -38,7 +38,7 @@ angular.module('app', [
   // all angular modules have a name
   // property who's value is the name you set the
   // module to be
-  home.name,
+  //home.name,
   blog.name,
   common.name,
   shared.name,

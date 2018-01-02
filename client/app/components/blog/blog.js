@@ -4,9 +4,11 @@ import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
 
 export const blog = angular.module('blog', [uiRouter, ngAnimate])
-  .config(function($stateProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    $urlRouterProvider.otherwise('/');
+    $locationProvider.hashPrefix('');
     $stateProvider.state('blog', {
-      url: '/posts',
+      url: '/',
       template: '<blog></blog>'
     });
   })
