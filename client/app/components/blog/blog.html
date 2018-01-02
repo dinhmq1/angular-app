@@ -1,10 +1,6 @@
-<div class="container">
   <div class="jumbotron">
-    <h1 class="jumbotron-heading">{{ vm.message }}</h1>
-    <div class="search">
-      <textbox bind-to="vm.search" label="Start Typing to Search"></textbox>
-    </div>
     <div class="container-fluid">
+      <h1 class="jumbotron-heading col-6 col-md-4">{{ vm.message }}</h1>
       <div class="row">
         <div class="col-6 col-md-4 post slide" ng-repeat="post in vm.posts | filter:vm.search">
           <div class="card-deck">
@@ -13,14 +9,14 @@
               <!-- <img class="card-img-top" ng-src="{{ ::vm.painting }}" alt="Card image cap"> -->
               <div class="card-block">
                 <h4 class="card-title">
-                  <em>{{ post.title }}</em>
+                  <a ui-sref="blogPost({id: post.id})">{{ post.title }}</a>
                 </h4>
                 <p class="card-text">
                   {{ post.body }}&#46;&#46;&#46;
                 </p>
               </div>
               <div class="card-footer" ng-repeat="user in vm.users | filter:{'id': post.userId} | limitTo: post.userId">
-                  <a ui-sref="blogPost({id: post.id})">{{ user.username }}</a>
+                  Posted By: <a ui-sref="userDetails({id: user.id})">{{ user.username }}</a>
               </div>
             </div>
           </div>
@@ -28,4 +24,3 @@
       </div>
     </div>
   </div>
-</div>

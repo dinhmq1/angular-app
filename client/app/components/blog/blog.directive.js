@@ -7,10 +7,7 @@ export const blogDirective = () => {
     template,
     controller,
     controllerAs: 'vm', // vm means view-model
-    scope: {
-      user:'=',
-      post:'='
-    }, // isolated scope
+    scope: {}, // isolated scope
     restrict: 'E',
     bindToController: true,
     replace: true

@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 class BlogController {
   constructor(Posts, Users) {
-    this.message = 'Just start typing to search for posts!';
+    this.message = 'All Posts'
     this.users = {};
     this.Users = Users;
     this.getUsers();
@@ -10,7 +10,7 @@ class BlogController {
     this.getPosts();
     // initiate search property because 
     // we're using controllerAs
-    this.search = '';
+    //this.search = '';
   }
   getUsers() {
     this.Users.get()
