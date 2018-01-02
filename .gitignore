@@ -4,3 +4,4 @@ DS_Store
 dist
 client/lib
 client/app/shared/posts.1.js
+client/app/components/userDetails/userDetails.1.html
